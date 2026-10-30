@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+/* Main Grid Layout */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  grid-row: 1 / -1;
+  background-color: #1992d4;
+  color: #ffffff;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 3rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand .mdi {
+  font-size: 2.25rem;
+}
+
+.brand h1 {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: grid;
+  gap: 1.15rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-links .mdi {
+  font-size: 1.4rem;
+}
+
+.secondary-nav {
+  align-self: start;
+}
+
+/* Header */
+.header {
+  background-color: #ffffff;
+  padding: 1rem 2.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  display: grid;
+  gap: 1.25rem;
+  z-index: 1;
+}
+
+.header-top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.search-bar .mdi {
+  font-size: 1.4rem;
+}
+
+.search-bar input {
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  width: min(100%, 550px);
+  outline: none;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: 700;
+}
+
+.user-profile .mdi {
+  font-size: 1.4rem;
+}
+
+.header-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.greeting {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.greeting-text p {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.greeting-text h2 {
+  font-size: 1.35rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.action-buttons button {
+  background-color: #1992d4;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.75rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* Avatars */
+.avatar {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #1e293b;
+  background-color: #facc15;
+}
+
+.small-avatar {
+  width: 40px;
+  height: 40px;
+  font-size: 0.9rem;
+}
+
+.large-avatar {
+  width: 64px;
+  height: 64px;
+  font-size: 1.3rem;
+}
+
+.trend-1 { background-color: #cbd5e1; width: 40px; height: 40px; }
+.trend-2 { background-color: #93c5fd; width: 40px; height: 40px; }
+.trend-3 { background-color: #fda4af; width: 40px; height: 40px; }
+
+/* Main Content Grid */
+.main-content {
+  padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 1.5rem;
+}
+
+.main-content h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-left: 8px solid #f0b429;
+  border-radius: 8px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.card h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.card p {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  font-size: 1.3rem;
+  color: #334155;
+}
+
+/* Right Panel (Announcements & Trending) */
+.right-panel {
+  display: grid;
+  align-content: start;
+  gap: 2rem;
+}
+
+.panel-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+}
+
+.announcement-item h5 {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.announcement-item p {
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+.panel-card hr {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1rem 0;
+}
+
+.trending-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.trending-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trending-item .handle {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.trending-item .project-tag {
+  font-size: 0.8rem;
+  color: #64748b;
+}
